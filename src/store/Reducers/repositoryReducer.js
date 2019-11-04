@@ -1,0 +1,60 @@
+import * as actionTypes from '../Actions/actionTypes';
+
+const initalState = {
+    data: null,
+    showSucessModal: false,
+}
+
+const reducer = (state = initalState, action) => {
+    switch (action.type) {
+        case actionTypes.GET_DATA_SUCCESS:
+            return executeGetDataSuccess(state, action);
+        case actionTypes.POST_DATA_SUCCESS:
+            return executePostDataSuccess(state, action);
+        case actionTypes.PUT_DATA_SUCCESS:
+            return executePutDataSuccess(state, action);
+        case actionTypes.DELETE_DATA_SUCCESS:
+            return executeDeleteDataSuccess(state, action);
+        case actionTypes.CLOSE_SUCCESS_MODAL:
+            return executeCloseSuccessModal(state, action);
+        default:
+            return state;
+    }
+}
+
+const executeGetDataSuccess = (state, action) => {
+    return {
+        ...state,
+        data: action.data
+    }
+}
+
+const executePostDataSuccess = (state, action) => {
+    return {
+        ...state,
+        showSuccessModal: true
+    }
+}
+const executePutDataSuccess = (state, action) => {
+    return {
+        ...state,
+        showSuccessModal: true
+    }
+}
+
+const executeDeleteDataSuccess = (state, action) => {
+    return {
+        ...state,
+        showSuccessModal: true
+    }
+}
+
+const executeCloseSuccessModal = (state, action) => {
+    action.props.history.push(action.url);
+    return {
+        ...state,
+        showSuccessModal: false,
+    }
+}
+
+export default reducer;
