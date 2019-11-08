@@ -8,4 +8,4 @@ npm start
 ```
 
 
-Server-side code is in my LandMonkAPI repository.
+Server-side code is in my AccountOwnerServer repository.
