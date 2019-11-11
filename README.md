@@ -14,5 +14,4 @@ npm start
 5. Centralized error handling using the Redux workflow.
 6. Created reusable modal window components using Bootstrap.
 7. Created a configuration object to dynamically generate our forms.
-
-Server-side code is in my AccountOwnerServer repository.
+8. Server-side code is in my AccountOwnerServer repository.
